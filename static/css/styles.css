@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-image: url('f1.jpeg'); /* Correct syntax for the background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    background-position: center;
+}
+
+/* Header without blurred background image */
+header {
+    position: relative; /* Position relative for styling */
+    text-align: center;
+    color: white; /* Ensures text is visible over the background */
+    padding: 40px 20px;
+    z-index: 1; /* Ensure header text is above the background */
+    font-size: 2rem; /* Increase font size */
+    font-weight: bold; /* Make the text bold */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+}
+
+/* Translucent container */
+.container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border to match the frosted look */
+    background: rgba(255, 255, 255, 0.7); /* Translucent white background */
+    backdrop-filter: blur(5px); /* Optional: Adds a frosted glass effect */
+    border-radius: 10px; /* Rounded corners for modern design */
+    display: inline-block;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    background-color: #9ebfb3;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #28946d;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}

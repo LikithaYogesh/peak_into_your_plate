@@ -1,0 +1,85 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: auto; /* Allow scrolling */
+    background-image: url('f1.jpeg'); /* Background image */
+    background-size: cover; /* Cover the entire background */
+    background-attachment: fixed; /* Keep the image fixed while scrolling */
+    background-position: center;
+    min-height: 100vh; /* Ensure the body covers the full height */
+}
+
+/* Header styling */
+header {
+    position: relative;
+    text-align: center;
+    color: white; /* White text for visibility */
+    padding: 40px 20px;
+    z-index: 1; /* Ensure header text is above everything else */
+    font-size: 2.5rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+/* Main styling */
+main {
+    margin: 20px auto;
+    padding-bottom: 20px; /* Add spacing at the bottom for better scrolling */
+}
+
+/* Result container styling */
+.result-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Light white background */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 800px; /* Restrict max width */
+    margin: 30px auto; /* Center the result box */
+    text-align: left; /* Align text to the left */
+}
+
+/* Title and section styling */
+.result-container h2,
+.result-container h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.result-container p,
+.result-container ul {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Button styling */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #9ebfb3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #28946d;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .result-container {
+        width: 90%; /* Make the result container responsive */
+    }
+
+    header {
+        font-size: 2rem; /* Slightly smaller text for headers */
+    }
+}

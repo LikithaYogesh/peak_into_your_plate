@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Analysis</title>
+    <link rel="stylesheet" href="/static/css/style1.css">
+</head>
+<body>
+    <header>
+        <h1>Nutrition Analysis</h1>
+    </header>
+    <main>
+        <form method="POST" enctype="multipart/form-data">
+            <label>Upload Food Image:</label>
+            <input type="file" name="food-image" required><br>
+            <label>Food Weight (grams):</label>
+            <input type="number" name="food-weight"><br>
+            <label>Allergies (comma-separated):</label>
+            <input type="text" name="allergies"><br>
+            <button type="submit">Analyze</button>
+        </form>
+    </main>
+</body>
+</html>

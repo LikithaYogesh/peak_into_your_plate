@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="/static/css/style3.css">
+</head>
+<body>
+    <header>
+        <h1>{{ analysis_type }} Results</h1>
+    </header>
+    <main>
+        <div class="result-container">
+            {% if analysis_type == 'Nutrition Analysis' %}
+                <h2>Predicted Food: {{ result.predicted_food }}</h2>
+                <h3>Nutrition Information:</h3>
+                <ul>
+                    {% for key, value in result.nutrition_info.items() %}
+                        <li><strong>{{ key }}:</strong> {{ value }}</li>
+                    {% endfor %}
+                </ul>
+                {% if result.allergy_alert %}
+                    <h3 style="color: red;">Allergy Alert:</h3>
+                    <p>{{ result.allergy_alert }}</p>
+                {% else %}
+                    <p>No allergens detected based on your input.</p>
+                {% endif %}
+            {% elif analysis_type == 'Calories Analysis' %}
+                <h2>Calories Analysis Results:</h2>
+                <p><strong>BMR (Basal Metabolic Rate):</strong> {{ result.bmr }} kcal/day</p>
+                <p><strong>TDEE (Total Daily Energy Expenditure):</strong> {{ result.tdee }} kcal/day</p>
+            {% elif result.error %}
+                <h2>Error:</h2>
+                <p>{{ result.error }}</p>
+            {% endif %}
+            <a href="/">Go Back Home</a>
+        </div>
+    </main>
+</body>
+</html>
